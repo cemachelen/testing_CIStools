@@ -1,0 +1,14 @@
+# Notes on CIS tools #
+
+## Prerequisits 
+module load python3 python-libs 
+
+##
+.bashrc must contain
+export CIS_PLUGIN_HOME=$HOME/cis/plugins 
+
+## Markus commands
+cis col -q od550aer:od550aer_IPSL_PDv2_CRESCENDOWP6_20100101_10h30m_loc.nc:product=IPSL_daily /nfs/a173/earmy/CRESCENDO/Data/MODIS/Terra/Giovanni/Global/g4.subsetted.MOD08_D3_6_1_AOD_550_Dark_Target_Deep_Blue_Combined_Mean.20100101.180W_90S_180E_90N.nc:collocator=box[h_sep=156km],kernel=nn_t -o MODIS_Terra_Giovanni_collocated/Global/od550aer_IPSL_PDv2_CRESCENDOWP6_20100101_10h30m_loc_col_MOD08_D3.nc 
+
+cis col -q od550aer:simulations/od550aer_IPSL_PDv2_CRESCENDOWP6_20100101_10h30m_loc.nc:product=IPSL_daily measurement/g4.subsetted.MOD08_D3_6_1_AOD_550_Dark_Target_Deep_Blue_Combined_Mean.20100101.180W_90S_180E_90N.nc:collocator=box[h_sep=156km],kernel=nn_t -o od550aer_IPSL_PDv2_CRESCENDOWP6_20100101_10h30m_loc_col_MOD08_D3.nc 
+
